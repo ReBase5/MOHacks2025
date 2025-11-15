@@ -1,12 +1,16 @@
 
-import sklearn
+import os
 import numpy
 import pandas
-import matplotlib
-from TideData import IrishNationalTideGaugeNetwork
+import sklearn.linear_model
 
 class TideML():
-    tideData = IrishNationalTideGaugeNetwork
+    def __init__(self):
+        tideDataFrame = pandas.read_csv("IrishNationalTideGaugeNetwork.csv", columns=['Time','Water_Level_LAT'])
 
-    def __init__ (self, tideData):
-        self.tideData = tideData
+        self.tideModel = sklearn.linear_model.LinearRegression()
+        self.tideModel.fit(tideDataFrame.columns[1],tideDataFrame.columns[2], sample_weight=0.5)
+
+    def predictTide(self, time):
+        return self.tideModel.predict(time)
+

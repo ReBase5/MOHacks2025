@@ -13,7 +13,7 @@ titleLabel = Label(window,
             fg = '#88FF88', 
             bg = '#60b6d0',
             relief = RAISED,
-            bd = 10,
+            bd = 12,
             padx = 20,
             pady = 20
             )       
@@ -25,9 +25,9 @@ askLabel = Label(window,
             fg = '#88FF88', 
             bg = '#60b6d0',
             relief = RAISED,
-            bd = 10,
-            padx = 20,
-            pady = 20
+            bd = 8,
+            padx = 10,
+            pady = 10
             )       
 askLabel.pack()
 
