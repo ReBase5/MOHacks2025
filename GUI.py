@@ -3,13 +3,13 @@
 from tkinter import *
 
 window = Tk()
-window.geometry("512x512")
+window.geometry("800x800")
 window.title("OceanGPT")
 window.config(background = "#60b6d0")
 
-label = Label(window, 
-            text = "OceanGPT\nEnter a time to get the tide at that time:", 
-            font = ('Currior', 40, 'bold'), 
+titleLabel = Label(window, 
+            text = "OceanGPT", 
+            font = ('Currior', 50, 'bold'), 
             fg = '#88FF88', 
             bg = '#60b6d0',
             relief = RAISED,
@@ -17,15 +17,33 @@ label = Label(window,
             padx = 20,
             pady = 20
             )       
-label.pack()
+titleLabel.pack()
+
+askLabel = Label(window, 
+            text = "Enter a time to get the tide at that time:", 
+            font = ('Currior', 25,), 
+            fg = '#88FF88', 
+            bg = '#60b6d0',
+            relief = RAISED,
+            bd = 10,
+            padx = 20,
+            pady = 20
+            )       
+askLabel.pack()
 
 def click():
-    
+    print("The button was pressed; it would calculate the thing here.")
 
-button = Button(window,
+calcButton = Button(window,
                 text = "Calculate",
-                command = click
+                command = click,
+                font = ("Currior", 20),
+                fg = "#88FF88",
+                bg = "#70c6e0",
+                activeforeground = "#88FF88",
+                activebackground = "#70c6e0",
+                state = ACTIVE
                 )
-button.pack()
+calcButton.pack()
 
 window.mainloop()
