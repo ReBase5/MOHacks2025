@@ -1,6 +1,8 @@
 We used Gemini to come up with our program.
-Patrick will learn how to create a GUI using Python
-Alex will learn how to create a prediction model using python
+
+One of us will learn how to create a GUI using Python
+
+One of us will learn how to create a prediction model using python
 
 Here's a link to the data set we used (11/15/2025):
 https://data.gov.ie/dataset/-gauge-network-intgn-gloss-station-union-hall-harbour-gloss-tide-gauges-co-cork-ireland-2020-present
